@@ -72,27 +72,27 @@ public class ArticleMetaHeader extends Content implements ArticleMeta {
         return equals(other);
     }
 
-    @Bindable
+//    @Bindable
     public String getTitle() {
         return title;
     }
 
-    @Bindable
+//    @Bindable
     public DateTime getPublicationDate() {
         return publicationDate;
     }
 
-    @Bindable
+//    @Bindable
     public String getIntro() {
         return intro;
     }
 
-    @Bindable
+//    @Bindable
     public String getLabel() {
         return label;
     }
 
-    @Bindable
+//    @Bindable
     public DateTime getUpdateDate() {
         if (update != null) {
             return update.getDate();

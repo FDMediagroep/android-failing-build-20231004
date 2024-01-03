@@ -28,7 +28,8 @@ public class SectionVerticalTeaserViewHolder extends AbstractTeaserViewHolder {
     @Override
     public void setValues(@NonNull Activity activity, @NonNull Teaser teaser, @NonNull List<WebLink> articleLinkList) {
         super.setValues(activity, teaser, articleLinkList);
-        binding.setTeaser(teaser);
+        binding.basicTeaserTitle.setText(teaser.getTeaserTitle());
+        binding.basicTeaserIntro.setText(teaser.getTeaserIntro());
     }
 
     public static SectionVerticalTeaserViewHolder create(ViewGroup parent) {

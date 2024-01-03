@@ -16,12 +16,12 @@ public final class FontScaleHolder {
 
    private static Float scalingFactor = 1F;
 
-   @BindingAdapter("scaledFont")
-   public static void scaledFont(@NonNull TextView textView, boolean scaledFont) {
-      if (scaledFont) {
-         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textView.getTextSize() * scalingFactor / getSystemFontScale(textView.getContext().getContentResolver()));
-      }
-   }
+//   @BindingAdapter("scaledFont")
+//   public static void scaledFont(@NonNull TextView textView, boolean scaledFont) {
+//      if (scaledFont) {
+//         textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textView.getTextSize() * scalingFactor / getSystemFontScale(textView.getContext().getContentResolver()));
+//      }
+//   }
 
    public static void setScalingFactor(Float scalingFactor) {
       FontScaleHolder.scalingFactor = scalingFactor;

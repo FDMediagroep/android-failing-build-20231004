@@ -57,18 +57,18 @@ public final class TeaserUtils {
         return res;
     }
 
-    @BindingAdapter("viewLabel")
-    public static void setLabel(View view, String label) {
-        view.setTag(R.id.label, label);
-    }
+//    @BindingAdapter("viewLabel")
+//    public static void setLabel(View view, String label) {
+//        view.setTag(R.id.label, label);
+//    }
 
-    @BindingAdapter("parentWidth")
-    public static void setGradientWidthAndHeight(View view, int parentWidth) {
-        ViewGroup.LayoutParams params = view.getLayoutParams();
-        params.width = parentWidth;
-        params.height = parentWidth;
-        view.setLayoutParams(params);
-    }
+//    @BindingAdapter("parentWidth")
+//    public static void setGradientWidthAndHeight(View view, int parentWidth) {
+//        ViewGroup.LayoutParams params = view.getLayoutParams();
+//        params.width = parentWidth;
+//        params.height = parentWidth;
+//        view.setLayoutParams(params);
+//    }
 
     private static final Map<String, Integer> NONSTANDARD_TEASER_HEIGHTS = new HashMap<>();
 

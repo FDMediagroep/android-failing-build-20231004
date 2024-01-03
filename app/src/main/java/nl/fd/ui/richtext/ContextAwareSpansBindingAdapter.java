@@ -26,28 +26,28 @@ public class ContextAwareSpansBindingAdapter implements LifecycleObserver {
 
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
-    @BindingAdapter(value = {"android:text", "enableStockQuotes", "enableLinks", "enableDropCap",
-            "scalable"}, requireAll = false)
-    @SuppressWarnings("java:S107")
-    public void enrich(TextView textView, RichText richText, boolean stockQuotes, boolean links,
-                       boolean dropCap, boolean scalable) {
-
-        if (richText != null && !stockQuotes && !links && !dropCap) {
-            // The spannable won't be changed
-            textView.setText(richText.getStaticText(), TextView.BufferType.SPANNABLE);
-        } else {
-            Editable editable = createEditable(textView, richText, scalable);
-
-            var wasTextSet = false;
-
-            wasTextSet = handleLinks(textView, links, editable, wasTextSet);
-
-            if (!wasTextSet) {
-                setText(textView, editable);
-            }
-
-        }
-    }
+//    @BindingAdapter(value = {"android:text", "enableStockQuotes", "enableLinks", "enableDropCap",
+//            "scalable"}, requireAll = false)
+//    @SuppressWarnings("java:S107")
+//    public void enrich(TextView textView, RichText richText, boolean stockQuotes, boolean links,
+//                       boolean dropCap, boolean scalable) {
+//
+//        if (richText != null && !stockQuotes && !links && !dropCap) {
+//            // The spannable won't be changed
+//            textView.setText(richText.getStaticText(), TextView.BufferType.SPANNABLE);
+//        } else {
+//            Editable editable = createEditable(textView, richText, scalable);
+//
+//            var wasTextSet = false;
+//
+//            wasTextSet = handleLinks(textView, links, editable, wasTextSet);
+//
+//            if (!wasTextSet) {
+//                setText(textView, editable);
+//            }
+//
+//        }
+//    }
 
     private boolean handleLinks(TextView textView, boolean links, Editable editable, boolean wasTextSet) {
         if (links) {

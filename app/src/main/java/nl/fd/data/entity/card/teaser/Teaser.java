@@ -59,8 +59,8 @@ public class Teaser extends BaseObservable implements Card, ArticleMeta, TeaserH
     private String teaserTitle;
 
     @Expose
-    @Getter(onMethod = @__(@Bindable))
-    @Bindable
+    @Getter/*(onMethod = @__(@Bindable))*/
+//    @Bindable
     private DateTime publicationDate;
 
     @Expose
@@ -94,7 +94,7 @@ public class Teaser extends BaseObservable implements Card, ArticleMeta, TeaserH
     private boolean free;
 
     @Expose
-    @Bindable
+//    @Bindable
     private boolean markedAsRead;
 
     @Expose
@@ -110,7 +110,7 @@ public class Teaser extends BaseObservable implements Card, ArticleMeta, TeaserH
     }
 
     public void publicationDateUpdated(){
-        notifyPropertyChanged(BR.publicationDate);
+//        notifyPropertyChanged(BR.publicationDate);
     }
 
     public ArticleCategory getCategory() {

@@ -154,11 +154,12 @@ public abstract class AbstractCardListFragment extends BaseFragment implements S
         binding.swipeRefresh.setRefreshing(false);
         needsData = true;
 
-        binding.setError(new ErrorSituation(getString(R.string.no_live_data_message),
-                button -> {
-                    binding.setError(null);
-                    loadData();
-                }));
+//        binding.swipeRefresh.setVisibility(View.GONE);
+//        binding.setError(new ErrorSituation(getString(R.string.no_live_data_message),
+//                button -> {
+//                    binding.setError(null);
+//                    loadData();
+//                }));
 
         Toast.makeText(getContext(), getString(R.string.try_again_later), Toast.LENGTH_LONG)
 

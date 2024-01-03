@@ -6,13 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <import type="android.view.View"/>
-
-        <variable
-            name="error"
-            type="nl.fd.ui.misc.ErrorSituation" />
-
     </data>
 
     <FrameLayout
@@ -24,8 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:visibility="@{error == null ? View.VISIBLE : View.GONE}"
-            app:viewLabel='@{"fg_cardlist:content_view_swipe_refresh"}'
             tools:visibility="visible">
 
             <androidx.recyclerview.widget.RecyclerView
@@ -37,7 +29,6 @@
                 android:background="@color/background_middle"
                 android:orientation="vertical"
                 android:descendantFocusability="blocksDescendants"
-                app:viewLabel='@{"fg_cardlist:content_view_recyclerview"}'
                 tools:listitem="@layout/card_teaser_vertical" />
 
         </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

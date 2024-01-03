@@ -77,10 +77,10 @@ public class HomeActivity extends BaseActivity /*implements NavigationBarView.On
 
         super.onCreate(savedInstanceState);
 
-        FdDataBindingComponent bindingComponent = FdApplication.get(HomeActivity.this).component().dataBindingBuilder().build();
-        bindingComponent.inject(HomeActivity.this);
-        DataBindingUtil.setDefaultComponent(bindingComponent);
-        contextAwareBindingAdapter = bindingComponent.getContextAwareSpansBindingAdapter();
+//        FdDataBindingComponent bindingComponent = FdApplication.get(HomeActivity.this).component().dataBindingBuilder().build();
+//        bindingComponent.inject(HomeActivity.this);
+//        DataBindingUtil.setDefaultComponent(bindingComponent);
+//        contextAwareBindingAdapter = bindingComponent.getContextAwareSpansBindingAdapter();
 
         getOnBackPressedDispatcher().addCallback(this, onBackPressedCallback);
 

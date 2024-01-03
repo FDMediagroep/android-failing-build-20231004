@@ -5,13 +5,13 @@ import dagger.Module;
 import dagger.Provides;
 import nl.fd.ui.richtext.ContextAwareSpansBindingAdapter;
 
-@Module
+//@Module
 public class FdDataBindingModule {
 
-    @DataBindingScope
-    @Provides
-    ContextAwareSpansBindingAdapter provideContextAwareSpansBindingAdapter() {
-        return new ContextAwareSpansBindingAdapter();
-    }
+//    @DataBindingScope
+//    @Provides
+//    ContextAwareSpansBindingAdapter provideContextAwareSpansBindingAdapter() {
+//        return new ContextAwareSpansBindingAdapter();
+//    }
 
 }

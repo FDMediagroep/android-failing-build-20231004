@@ -30,10 +30,10 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ColorHelper {
 
-    @BindingAdapter("srcCompat")
-    public static void setIconVector(AppCompatImageView view, @DrawableRes int iconRes) {
-        view.setImageResource(iconRes);
-    }
+//    @BindingAdapter("srcCompat")
+//    public static void setIconVector(AppCompatImageView view, @DrawableRes int iconRes) {
+//        view.setImageResource(iconRes);
+//    }
 
     /**
      * Changes the color of the Navigation Bar to {@code color} (if supported) and the Status Bar
@@ -130,19 +130,19 @@ public class ColorHelper {
         }
     }
 
-    @BindingAdapter(value = {"borderId", "borderColor", "borderColorId",
-            "inlayId", "inlayColor", "inlayColorId"}, requireAll = false)
-    public static void coloredBackgroundBorder(View view,
-                                               @IdRes Integer borderId, @ColorInt Integer borderColor, @ColorRes Integer borderColorId,
-                                               @IdRes Integer inlayId, @ColorInt Integer inlayColor, @ColorRes Integer inlayColorId) {
-        Drawable backgroundDrawable = view.getBackground();
-        if (backgroundDrawable instanceof LayerDrawable) {
-            Context context = view.getContext();
-            coloredBorder((LayerDrawable) backgroundDrawable, borderId, pick(context, borderColor, borderColorId), inlayId, pick(context, inlayColor, inlayColorId));
-        } else {
-            log.warn("background is not a LayerDrawable!");
-        }
-    }
+//    @BindingAdapter(value = {"borderId", "borderColor", "borderColorId",
+//            "inlayId", "inlayColor", "inlayColorId"}, requireAll = false)
+//    public static void coloredBackgroundBorder(View view,
+//                                               @IdRes Integer borderId, @ColorInt Integer borderColor, @ColorRes Integer borderColorId,
+//                                               @IdRes Integer inlayId, @ColorInt Integer inlayColor, @ColorRes Integer inlayColorId) {
+//        Drawable backgroundDrawable = view.getBackground();
+//        if (backgroundDrawable instanceof LayerDrawable) {
+//            Context context = view.getContext();
+//            coloredBorder((LayerDrawable) backgroundDrawable, borderId, pick(context, borderColor, borderColorId), inlayId, pick(context, inlayColor, inlayColorId));
+//        } else {
+//            log.warn("background is not a LayerDrawable!");
+//        }
+//    }
 
     @ColorInt
     private static Integer pick(Context context, @ColorInt Integer color, @ColorRes Integer colorId) {
@@ -180,16 +180,16 @@ public class ColorHelper {
         }
     }
 
-    @BindingAdapter("color")
-    public static void setIconColor(ImageView view, @ColorInt int color) {
-        view.setColorFilter(color, PorterDuff.Mode.SRC_IN);
-    }
+//    @BindingAdapter("color")
+//    public static void setIconColor(ImageView view, @ColorInt int color) {
+//        view.setColorFilter(color, PorterDuff.Mode.SRC_IN);
+//    }
 
-    @BindingAdapter("colorRes")
-    public static void setIconColorRes(ImageView view, @ColorRes int colorRes) {
-        if (colorRes != 0) {
-            int color = ContextCompat.getColor(view.getContext(), colorRes);
-            setIconColor(view, color);
-        }
-    }
+//    @BindingAdapter("colorRes")
+//    public static void setIconColorRes(ImageView view, @ColorRes int colorRes) {
+//        if (colorRes != 0) {
+//            int color = ContextCompat.getColor(view.getContext(), colorRes);
+//            setIconColor(view, color);
+//        }
+//    }
 }

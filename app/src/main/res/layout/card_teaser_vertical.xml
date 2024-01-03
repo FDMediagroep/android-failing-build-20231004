@@ -9,9 +9,9 @@
 
         <import type="nl.fd.ui.misc.TeaserUtils" />
 
-        <variable
-            name="teaser"
-            type="nl.fd.data.entity.card.teaser.Teaser" />
+<!--        <variable-->
+<!--            name="teaser"-->
+<!--            type="nl.fd.data.entity.card.teaser.Teaser" />-->
 
     </data>
 
@@ -32,7 +32,6 @@
             android:layout_marginStart="@dimen/teaserLayoutPaddingSides"
             android:layout_marginEnd="@dimen/teaserLayoutPaddingSides"
             android:layout_marginBottom="@dimen/verticalTeaserTitleMarginBottom"
-            android:text="@{TeaserUtils.teaserTitle(teaser)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -47,7 +46,6 @@
             android:layout_marginStart="@dimen/teaserLayoutPaddingSides"
             android:layout_marginEnd="@dimen/teaserLayoutPaddingSides"
             android:layout_marginBottom="@dimen/verticalTeaserMarginBottom"
-            android:text="@{teaser.teaserIntro}"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -8,7 +8,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
-@Module(subcomponents = FdDataBindingComponent.class)
+@Module/*(subcomponents = FdDataBindingComponent.class)*/
 class AppModule {
     private final Application application;
 

@@ -5,17 +5,19 @@ import dagger.Subcomponent;
 import nl.fd.ui.activity.HomeActivity;
 import nl.fd.ui.richtext.ContextAwareSpansBindingAdapter;
 
-@DataBindingScope
-@Subcomponent(modules = FdDataBindingModule.class)
-public interface FdDataBindingComponent extends DataBindingComponent {
+//@DataBindingScope
+@Subcomponent/*(modules = FdDataBindingModule.class)*/
+public interface FdDataBindingComponent
+//extends DataBindingComponent
+{
 
-    ContextAwareSpansBindingAdapter getContextAwareSpansBindingAdapter();
-
-    void inject(HomeActivity activity);
-
+//    ContextAwareSpansBindingAdapter getContextAwareSpansBindingAdapter();
+//
+//    void inject(HomeActivity activity);
+//
     @Subcomponent.Builder
     interface Builder {
-        Builder bindingModule(FdDataBindingModule module);
+//        Builder bindingModule(FdDataBindingModule module);
 
         FdDataBindingComponent build();
     }
