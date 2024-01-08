@@ -11,6 +11,7 @@ jobs:
         shell: bash
         run: |
            ls /usr/local/lib/android/sdk/platforms
+           /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --list
            /usr/local/lib/android/sdk/cmdline-tools/latest/bin/sdkmanager --uninstall "platforms;"
            #To validate android-34-ext10 was removed
            ls /usr/local/lib/android/sdk/platforms
