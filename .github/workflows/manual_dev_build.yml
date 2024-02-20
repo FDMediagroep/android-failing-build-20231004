@@ -28,4 +28,5 @@ jobs:
       - name: build dev
         run: ./gradlew assembleDevRelease
       - name: list packages
+        if: always()
         run: dpkg -l
