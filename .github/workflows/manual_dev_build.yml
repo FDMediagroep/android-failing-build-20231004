@@ -25,3 +25,5 @@ jobs:
         run: chmod +x ./gradlew
       - name: build dev
         run: ./gradlew assembleDevRelease
+      - name: list packages
+        run: dpkg -l
