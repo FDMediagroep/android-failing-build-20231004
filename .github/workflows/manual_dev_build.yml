@@ -23,6 +23,8 @@ jobs:
           java-version: '11'
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      - name: list packages
+        run: dpkg -l
       - name: build dev
         run: ./gradlew assembleDevRelease
       - name: list packages
